@@ -23,14 +23,14 @@ const UserDropdown = () => {
         router.push('/sign-in');
     }
 
-    const user = { name: 'John', email: 'email@'}
+    const user = { name: 'Savvas', email: 'email@'}
 
   return (
     <DropdownMenu>
         <DropdownMenuTrigger asChild>
             <Button variant="ghost" className="flex items-center gap-3 text-gray-4 hover:text-yellow-500">
                     <Avatar className="h-8 w-8">
-                        <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                        <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D35AQFOClqfwlT0Rg/profile-framedphoto-shrink_200_200/B4DZfyv84aHkAc-/0/1752124346223?e=1761559200&v=beta&t=iZxTRkbX9jvIbX8sv4JPKOdQNK1lQ6-yiLoIuVuqWvY" />
                         <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                             {user.name[0]}
                         </AvatarFallback>
@@ -46,7 +46,7 @@ const UserDropdown = () => {
                 <DropdownMenuLabel>
                         <div className="flex relative items-center gap-3 py-2">
                             <Avatar className="h-10 w-10">
-                                <AvatarImage src="https://avatars.githubusercontent.com/u/153423955?s=280&v=4" />
+                                <AvatarImage src="https://media.licdn.com/dms/image/v2/D4D35AQFOClqfwlT0Rg/profile-framedphoto-shrink_200_200/B4DZfyv84aHkAc-/0/1752124346223?e=1761559200&v=beta&t=iZxTRkbX9jvIbX8sv4JPKOdQNK1lQ6-yiLoIuVuqWvY" />
                                 <AvatarFallback className="bg-yellow-500 text-yellow-900 text-sm font-bold">
                                     {user.name[0]}
                                 </AvatarFallback>
