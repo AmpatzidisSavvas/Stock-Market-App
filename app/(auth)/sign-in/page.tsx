@@ -5,6 +5,8 @@ import { Button } from "@/components/ui/button";
 import InputField from "@/components/forms/InputField";
 import FooterLink from "@/components/forms/FooterLink";
 import { useRouter } from "next/navigation";
+import { signInWithEmail } from "@/lib/actions/auth.actions";
+import { toast } from "sonner";
 
 const SignIn = () => {
   const router = useRouter();
@@ -21,15 +23,15 @@ const SignIn = () => {
   });
 
   const onSubmit = async (data: SignInFormData) => {
-    // try {
-    //   const result = await signInWithEmail(data);
-    //   if (result.success) router.push("/");
-    // } catch (e) {
-    //   console.error(e);
-    //   toast.error("Sign in failed", {
-    //     description: e instanceof Error ? e.message : "Failed to sign in.",
-    //   });
-    // }
+    try {
+      const result = await signInWithEmail(data);
+      if (result.success) router.push("/");
+    } catch (e) {
+      console.error(e);
+      toast.error("Sign in failed", {
+        description: e instanceof Error ? e.message : "Failed to sign in.",
+      });
+    }
   };
 
   return (
@@ -64,7 +66,7 @@ const SignIn = () => {
           disabled={isSubmitting}
           className="yellow-btn w-full mt-5"
         >
-          {isSubmitting ? "Signing In" : "Sign In"}
+          {isSubmitting ? "Signing In..." : "Sign In"}
         </Button>
 
         <FooterLink
