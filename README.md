@@ -1,6 +1,6 @@
 <div align="center">
   <br />
-  <img src="public/assets/images/Screenshot.png" alt="Project Banner"> 
+  <img src="public/assets/images/Screenshot .png" alt="Project Banner"> 
   <br />
   <div>
     <img src="https://img.shields.io/badge/-Next.js-black?style=for-the-badge&logoColor=white&logo=next.js&color=black"/>
